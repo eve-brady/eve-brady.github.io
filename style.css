@@ -632,15 +632,31 @@ ul {
 	 margin-bottom: 20px;
 	color:#000
 }
-.contact-box{
-	margin: auto;
-	padding: 20px;
-	background-color:#fff;
-	border-radius:8px;
-	box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-	margin-bottom: 20px;
-	max-width: 900px;
+.contact-box {
+    display: flex;                  /* enables horizontal layout */
+    justify-content: space-between; /* one card left, one right */
+    align-items: flex-start;        /* align top edges */
+    gap: 20px;                      /* spacing between cards */
+    flex-wrap: wrap;                /* stacks on small screens */
+    margin: 40px auto;              /* center container */
+    max-width: 900px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
+
+.contact-card {
+    flex: 1 1 calc(50% - 10px);    /* each card takes ~50% minus gap */
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    text-align: center;
+    box-sizing: border-box;        /* includes padding in width calculation */
+}
+
+
 .subH{
 	text-align: center;
 	font-size:1.5em;
@@ -677,10 +693,11 @@ button:hover {
 }/*Contact me form learned from --> https://www.w3schools.com/howto/howto_css_contact_form.asp */
 
 .contact-subheader {
-  font-size: 1.2rem;
-  margin-bottom: 40px;
-  color: #666;
-  text-align: center;
+    flex-basis: 100%;      /* take the full width of the flex container */
+    text-align: center;    /* centre the text */
+    margin-bottom: 40px;   /* spacing below it */
+    color: #666;
+    font-size: 20px;
 }
 
 .contact{
