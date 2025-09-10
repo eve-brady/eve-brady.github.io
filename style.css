@@ -9,6 +9,10 @@ body {
     color: #333;
     background-color: #f4f4f4;
     margin: 0;
+    height: 100%;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 header {
@@ -21,6 +25,9 @@ header {
     z-index: 1000;
 }
 
+main{
+    flex: 1;
+}
 .logo a {
     text-decoration: none;
     color: #333; /*dark grey colour*/
@@ -112,10 +119,13 @@ nav {
     color: #ff1493;
 }
 footer {
+ 
+    bottom: 0;
     background-color: #333;
     color: #fff;
     padding: 20px;
     text-align: center;
+    
 }
 
 
@@ -619,7 +629,7 @@ ul {
 	color:#000
 }
 .contact-box{
-	margin: 0 auto;
+	margin: auto;
 	padding: 20px;
 	background-color:#fff;
 	border-radius:8px;
@@ -661,3 +671,14 @@ button {
 button:hover {
     background-color: #ff1493; 
 }/*Contact me form learned from --> https://www.w3schools.com/howto/howto_css_contact_form.asp */
+
+.contact-subheader {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #666;
+  text-align: center;
+}
+
+.contact{
+    flex: 1;
+}
