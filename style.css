@@ -1,0 +1,663 @@
+
+
+/* HEADER AND NAV ON ALL PAGES */
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+header {
+    background-color: #fff;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #333; /*dark grey colour*/
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.0rem;
+    font-weight: 500;
+    letter-spacing: 0.1em; /*even spacing between logo*/
+    color: #333;
+    text-transform: uppercase;
+    position: relative;
+  margin-left: 20px;
+}/*learned about em spacing from here --> https://www.w3.org/Style/Examples/007/units.en.html#units */
+
+.logo::after { /*creation of a line under the 'Eve' logo*/
+    content: '';
+    display: block;
+    height: 4px; /*limits height of the underline*/
+    width: 35%; /* limits the length of the line to only underline my first name */
+    background: #ff69b4;
+    position: absolute;
+    left: 2;
+    bottom: -5px;
+	transition: width 0.3s; /*makes the hover transition more gradual*/
+}
+
+.logo:hover::after {
+    width: 100%; /*lengthens line under the Logo to the full width of my name */
+}/*above pseudo elements learned from
+https://developer.mozilla.org/en-US/docs/Web/CSS/::after
+https://www.w3schools.com/css/css_pseudo_elements.asp#:~:text=What%20are%20Pseudo%2DElements%3F,before%20or%20after%20an%20element
+and
+https://www.youtube.com/watch?app=desktop&v=UpJyCDEXEtc */
+.tagline {
+    font-size: 0.8rem; /* Smaller font size */
+    color: #666; /* Softer grey colour */
+    margin-top: 5px; /* Small spacing below */
+    text-transform: none; /* Regular text */
+}
+nav {
+    max-width: 1200px;
+    
+    display: flex;
+    justify-content: space-between; 
+    align-items:center; /*keeps space centre within the nav rather than the top of the bar */
+}
+
+.nav-links {
+    list-style: none; /*removes the bulletpoints */
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline; /*keeps the list within the same line in the nav bar */
+}
+
+.nav-links li a {
+    text-decoration: none; /*removes underline from nav links */
+    color: #333;
+    position: relative;
+    
+}
+
+.nav-links li a.active {
+    font-weight: bold; /*makes active page link bolded distinguishing from non-active links*/
+	
+}
+
+.nav-links li a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: #000;
+    position: absolute;
+    opacity: 0; /*hides everything within this class until changed during hover - see below*/
+    
+}
+
+.nav-links li a:hover::after {
+    opacity: 1; /*makes all of the above elements appear on hover through change of opacity*/
+}
+.nav-links li a:hover {
+    color: #ff1493;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+
+/*BELOW IS LAYOUT FOR HOME PAGE ONLY */
+
+
+.main {
+    height: 100vh; /*makes the main content fill 100% of the viewable screen's height, within class context*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 60px;
+    background-color: #fff;
+}
+
+.main-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* rounded image, learned from -> https://www.w3schools.com/howto/howto_css_rounded_images.asp */
+    margin-right: 20px;
+    object-fit: cover;
+    float: left;
+}
+
+.main-text h1 {
+    font-size: 4em;
+    color: #000;
+}
+
+.blurb-text {
+    font-size: 1.2em; 
+    color: #555;      
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+.main p {
+    font-size: 1.2em;
+    margin: 20px ;
+}
+.proj-button {
+    color: #ff69b4;  
+    font-size: 1.2em;  
+}
+
+.proj-button:hover {
+    color: #ff1493; 
+}
+
+
+/*BELOW IS LAYOUT FOR ABOUT PAGE ONLY */
+
+
+.about-section {
+    max-width: 800px;
+    margin: 100px auto 60px; /* Centre the box while also creating a gap between the nav bar and the flex box */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px; /*rounds corners of the flex box*/
+    
+}
+
+.about-section h1 {
+    font-size: 2.2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #000; /* Black */
+}
+
+.about-section p {
+    font-size: 1em;
+    margin-bottom: 20px;
+    color: #555; 
+}
+
+.about-section h2 {
+    font-size: 1.8em;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: #000; 
+}
+.about-section a {
+    color: #ff69b4; 
+}
+
+.about-section a:hover {
+    color:#ff1493
+}
+
+.dog-introduction {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.dog-image {
+    max-width: 200px;
+    border-radius: 8px;
+   
+}
+
+.dog-description h3 {
+    font-size: 1.5em;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.dog-description p {
+    font-size: 1em;
+    color: #555;
+}
+
+
+/*BELOW IS LAYOUT FOR PROJECTS PAGE ONLY*/
+
+
+.projects-section {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 20px;
+    background-color: #f4f4f4; /*matches background colour, aiding the aesthetic I want*/
+    border-radius: 8px;
+}
+
+.projects-section h1 {
+    font-size: 2.2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #000; 
+    text-align: center;
+}
+
+.projects-grid {
+    display: flex;
+    flex-direction: column; /* Stack vertically */
+    gap: 30px; /* Space between project sections */
+}
+
+.project-card {
+      display: flex;
+    flex-direction: row; /* Aligns everything within the card */
+    align-items: center; 
+    background-color: #fff; /*white colour for each card to stand out from the background*/
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgb(0, 0, 0, 0.2); /* adds shadow to card allowing it to stand out from the background */
+	/* learned from -> https://www.w3schools.com/css/css3_shadows_box.asp */
+}
+
+.project-card:hover {
+    transform: scale(1.05); /* grow effect on hover learned from -> https://travis.media/blog/how-to-make-an-item-grow-on-hover-with-css/ */
+  
+}
+
+.project-image {
+	display: flex;
+	float: center;
+	width: 15%;
+	height: 15%;
+	margin-left:10px;
+}
+
+.project-info {
+    padding: 20px;
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center; /* Aligns all the text to the centre for a better aesthetic */
+}
+
+.project-info h2 {
+    font-size: 1.5em;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    font-size: 1em;
+    color: #555; 
+    margin-bottom: 15px;
+}
+
+.project-link {
+    text-decoration: none;
+    color: #ff69b4;
+    font-weight: bold;
+    
+}
+
+.project-link:hover {
+    color: #ff1493;
+}
+
+
+/*BELOW IS LAYOUT FOR PROJECTS AFTER Learn More IS SELECTED -- FURTHER DETAILS ARE SEPERATED BY PROJECT*/
+
+
+
+.bProj-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.bProj-content {
+	background-color:#fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    margin-top: 20px;
+}
+
+.bProj-title {
+   
+    font-size: 1.8em;
+   
+    margin-bottom: 20px;
+}
+
+.bProj-overview {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.tProj-overview {
+  display: flex;
+  flex-direction: column; /* stack rows vertically */
+  gap: 20px;
+}
+.tProj-description a {
+    color: #ff69b4; 
+}
+
+.tProj-description a:hover {
+    color:#ff1493
+}
+
+.bProj-row {
+  display: flex;          /* thesis details + image side by side */
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.thesis-details {
+  flex: 1; /* left column */
+  width: 55%;
+}
+
+.tProj-image {
+  flex: 1; /* right column */
+  display: flex;
+  align-items: center;
+}
+
+.tProj-image img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+
+
+.tProj-description {
+  font-size: 18px;
+  color: #555;
+}
+.bProj-image img {
+    width: 45%;
+    border-radius: 8px;
+    margin-left: 20px;
+	float: right;
+	margin-right: 50px;
+}
+.bProj-description {
+    width: 55%;
+    font-size: 18px;
+    color: #555;
+}
+
+
+/* THESIS SPECIFIC DETAILS */
+
+
+.thesis-details {
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.thesis-details-title {
+   
+    font-size: 1em;
+    
+    margin-bottom: 10px;
+}
+
+.thesis-details-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.thesis-details-list li {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+
+/*BELOW IS LAYOUT FOR VYCE GAMES SPECIFIC DETAILS*/
+
+
+.vyce-details{
+	background-color: #FFF;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}/* this div allows for the layout of the details to lay below the header and image- the shadow has been removed, unlike the thesis details div as I wanted this to have an aesthetic resembling a blog post as a nod to my work with vyce games */
+.vyce-details a {
+    color: #ff69b4; 
+}
+ .vyce-details a:hover {
+    color:#ff1493
+}
+
+/*image slider*/
+
+.tlp-slider-container {
+    position: relative;
+    max-width: 500px;
+    margin: 40px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.slider-container {
+    position: relative;
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 105, 180, 0.7);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(255, 20, 147, 0.9);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+/*BELOW IS LAYOUT FOR HTML SPECIFIC DETAILS*/ 
+
+
+.html-section{
+	/* As this section is a place holder I didn't end up giving it any specific details, however I wanted to keep a clear designated section for this page within the style sheet so that I am able to change this section with greater ease and organisation in the future*/
+}
+
+
+/*BELOW IS LAYOUT FOR CV SECTION ONLY*/
+
+
+.cv-header{
+	margin-top: 100px;
+	font-size:2.2em;
+	text-align: center;
+	 margin-bottom: 20px;
+	color:#000
+}
+.cv-section{
+font-size:16px
+}
+
+ .cv-section {
+    max-width: 800px; 
+     margin: 20px auto 80px;
+    padding: 20px; 
+    background: #fff; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.cv-section h1 {
+    font-size: 2.2em; 
+    margin-bottom: 10px; 
+    color: #000; 
+    font-weight: bold; 
+}
+
+.cv-section .title {
+    font-size: 1.5em; 
+    margin-bottom: 20px; 
+    color: #555; 
+}
+
+.contact-info {
+    margin-bottom: 20px; 
+    font-size: 1em; 
+}
+
+.contact-info a {
+    color: #ff69b4; 
+}
+
+.contact-info a:hover {
+    color:#ff1493
+}
+
+.cv-section h2 {
+    font-size: 1.8em; 
+    margin-top: 30px; 
+    margin-bottom: 10px; 
+    color: #000; 
+}
+
+.job, .education {
+    margin-bottom: 20px;
+}
+
+.job h3, .education h3 {
+    font-size: 1.2em; 
+    margin: 0; 
+}
+
+.company {
+    font-size: 1em; 
+    color: #777; 
+}
+
+ul {
+    padding-left: 20px; 
+}
+
+
+.skills {
+    padding-left: 20px; 
+}
+
+.skills li {
+    margin-bottom: 5px;
+}
+
+
+
+/*BELOW IS LAYOUT FOR CONTACT ME PAGE ONLY */
+
+
+.contact-header{
+	margin-top: 100px;
+	font-size:2.2em;
+	text-align: center;
+	 margin-bottom: 20px;
+	color:#000
+}
+.contact-box{
+	margin: 0 auto;
+	padding: 20px;
+	background-color:#fff;
+	border-radius:8px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+	margin-bottom: 20px;
+	max-width: 900px;
+}
+.subH{
+	text-align: center;
+	font-size:1.5em;
+	color:#666;
+}
+.contact-form {
+    display: flex; 
+    flex-direction: column; 
+}
+
+label {
+    margin-bottom: 5px; 
+}
+
+input, textarea {
+    padding: 10px; 
+    margin-bottom: 20px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    font-size: 16px; 
+}
+
+button {
+    background-color: #ff69b4; 
+    color: #FFF; 
+    border: none; 
+    padding: 10px; 
+    border-radius: 4px;  
+    font-size: 18px; 
+}
+
+button:hover {
+    background-color: #ff1493; 
+}/*Contact me form learned from --> https://www.w3schools.com/howto/howto_css_contact_form.asp */

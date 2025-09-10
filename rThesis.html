@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Projects | Eve Brady</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav>
+   <div class="logo">
+            <a href="home.html">Eve Brady</a> 
+        </div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="Projects.html" class="active">Projects</a></li>
+            <li><a href="CV.html">CV</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<div class="projects-section">
+    <h1>My Projects</h1>
+
+	 	<!-- As this page is to focus on expanding upon the chosen project I needed to find a way to differentiate it easier than just creating a div, I googled main content in html and learned about "main" section you can use, I utilised this specifically for the individual project sections to help make them stand out, https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main -->
+	<main class="bProj-container">
+  <section class="bProj-content">
+    <h2 class="bProj-title">The Little Picture</h2>
+
+  <div class="tProj-overview">
+  <div class="bProj-row">
+    <div class="thesis-details">
+      <h3 class="thesis-details-title">Key Project Details</h3>
+      <ul class="thesis-details-list">
+        <li><strong>Project Duration:</strong> <br>
+          <em>July 2025 - August 2025</em>
+        </li>
+        <li><strong>Team Members:</strong> <br>
+          <em>
+            Eve Brady (Project Manager and Narrative Designer) <br>
+            Diana Petrova (UI/UX and 2D Artist) <br>
+            Jiayin Wen (Technical and 3D Artist) <br>
+            Ming Hei Chan (Game Designer and Unity Developer) <br>
+            Rory Lyons (Game Designer and Unity Developer)
+          </em>
+        </li>
+        <li><strong>Supervisor:</strong> <br> <em>Gaye Stephens</em></li>
+      </ul>
+    </div>
+  
+      <div class="tProj-image">
+      <img src="photos/tlp.png" alt="thesis Image">
+    </div>
+  </div>
+
+    <!-- Description moved here -->
+    <div class="tProj-description">
+        <h3> What is The Little Picture?</h3>
+      <p>The Little Picture is a narrative-driven 3D platformer, crafted in just two months as part of my Master’s in Interactive Digital Media. Working closely with a team of five,
+       we took the project from a simple concept to a fully realised interactive experience. Every level, character and environment was carefully designed to immerse players in 
+       the story, inviting them to explore, discover and connect with the world which we created together. </p>
+
+       <br>
+       <h3> What did I do?</h3>
+       <p>As Project Manager for The Little Picture, I led the operational side of the project, establishing and maintaining clear communication strategies through Asana, Discord and WhatsApp to ensure our team remained organised and aligned.
+I facilitated twice-weekly meetings, worked closely with each team member to support their progress and coordinated with the University and approved vendors to manage the showcase budget, sourcing the necessary hardware and software to bring our vision to life.<br><br>
+
+On the creative side, I developed the game’s narrative, ensuring that every element from story beats to level environments had meaning and purpose.
+I carefully selected and drew inspiration for each environment, making certain that every design choice supported the overall player experience.
+I also sourced and curated the majority of the game’s audio, including collaborating with our talented voice-over actress Aisling Healy, for whom I wrote the script, helping to give the game’s single character voice and personality.
+Additionally, I produced a trailer that showcased the progression of our level designs and highlighted the narrative, presenting our work in a cohesive and compelling way.<br><br>
+
+Through this role I honed both my project management and creative leadership skills, gaining experience in guiding a collaborative team from concept to finished product, skills directly transferable to professional game development environments.</p>
+
+<video width="640" height="360" controls style="display: block; margin: 0 auto;">
+  <source src="photos/TLP Trailer.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<h3> The Showcase </h3>
+<p>The Little Picture was presented over two days to the general public, giving visitors the chance to play the game and provide feedback.
+On day one, we observed how players interacted with the game and used their insights to make improvements for day two such as clarifying audio cues and making controls more intuitive.<br><br>
+
+For the showcase we set up an engaging stall with two PlayStations for hands-on play and a TV looping two different trailers.
+We also used a projector to display in-game assets like fireflies, bubbles and clouds, creating an immersive atmosphere for visitors.
+A Post-it wall invited attendees to leave comments and drawings which proved especially popular with many illustrating their favourite character, Woof the sheep.<br><br>
+
+We also ran a speed-run event where the top three times won a pin, sparking friendly competition and encouraging many visitors to return to see if their scores had been beaten.
+The showcase not only allowed us to share our game with a wider audience but also gave us invaluable feedback and insights into player engagement, helping us iterate quickly and deliver a richer experience.</p>
+  <div class="tlp-slider-container">
+                        <div class="slider">
+                            <div class="slide active">
+                                <img src="photos/sc1.JPG" alt="The Little Picture TShirt">
+                            </div>
+                            <div class="slide">
+                                <img src="photos/sc2.JPG" alt="Team Photo">
+                            </div>
+                            <div class="slide">
+                                <img src="photos/sc3.JPG" alt="Showcase Image">
+                            </div>
+                            <div class="slide">
+                                <img src="photos/sc4.JPG" alt="Monitor Image">
+                            </div>
+                           
+                        </div>
+                        <button class="prev" onclick="moveSlide(-1)">❮</button>
+                        <button class="next" onclick="moveSlide(1)">❯</button>
+                    </div>
+            
+                <h3>The Future of The Little Picture</h3>
+               <p class="tProj-description"> here is one unfinished level that the team plans to complete and refine before publishing the game on Steam.
+However, our uncompleted demo is available on <a href="https://axelftv.itch.io/the-little-picture" target="_blank">itch.io</a> and we would love for you to check it out and leave a comment.<br></p>
+            </div>
+            </div>
+  </section>
+</main>
+
+    <div class="projects-section">
+	    <div class="projects-grid">
+        <div class="project-card">
+            <img src="photos/VYCE.png" alt="Project 2" class="project-image">
+            <div class="project-info">
+                <h2>Vyce Games</h2>
+                <p>With my work a Vyce Games I was heavily involved in the creative process of both our first game release CIVS and the creation of our website.</p>
+                <a href="vGames.html" class="project-link">Learn More</a>
+            </div>
+        </div>
+        
+        <div class="project-card">
+            <img src="photos/logo.png" alt="Project 3" class="project-image">
+            <div class="project-info">
+                <h2>HTML</h2>
+                <p>Through my knowledge of HTML5 and CSS I have been able to create a portfolio website utilising my skills to their full ability.</p>
+                <a href="pHTML.html" class="project-link">Learn More</a>
+            </div>
+        </div>
+        </div>
+      
+    </div>
+</div>
+
+<footer>
+    <p>© 2024 Eve Brady. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
+
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const slider = document.querySelector('.slider');
+    
+    function showSlide(index) {
+        if (index >= slides.length) {
+            currentSlide = 0;
+        } else if (index < 0) {
+            currentSlide = slides.length - 1;
+        } else {
+            currentSlide = index;
+        }
+        slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+    
+    function moveSlide(direction) {
+        showSlide(currentSlide + direction);
+    }
+    
+    showSlide(currentSlide);
+    </script>
+    

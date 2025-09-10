@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Projects | Eve Brady</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav>
+   <div class="logo">
+            <a href="home.html">Eve Brady</a> 
+        </div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="Projects.html" class="active">Projects</a></li>
+            <li><a href="CV.html">CV</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="projects-section">
+    <h1>My Projects</h1>
+	 	
+	<main class="bProj-container">
+        <section class="bProj-content">
+            <h2 class="bProj-title"> Vyce Games</h2>
+            <div class="bProj-overview">
+                <p class="bProj-description">
+				Vyce games was an early stage start up organisation focused on harnessing the full potential of emerging technologies like Virtual Reality, Augmented Reality and Artificial Intelligence.
+				</p>
+                <div class="bProj-image">
+                    <img src="photos/VYCE.png" alt="Vyce Games Image">
+                </div>
+				</div>
+                <div class="vyce-details">
+                    <p>
+                        I joined Vyce Games in November 2023 as the Marketing Team Lead and was promoted to Operations Manager by May 2024. During my time with the company, I played a key role in the design and development of our upcoming game mode, CIVS, which was planned for release through a featured partnership with Mineplex in December 2024. Although Vyce Games ultimately shut down, my time there allowed me to gain valuable experience across marketing, operations, and game development.
+                    </p>
+                
+                    <p>
+                        In addition to my work on CIVS, I also served as the main designer and editor of our website, <a href="https://web.archive.org/web/20241114082835/https://vycegames.com/" target="_blank">Vyce Games</a>. I wrote all of our blog posts and maintained the site's design to ensure it reflected our company's aesthetic and branding.
+                    </p>
+                    <div class="slider-container">
+                        <div class="slider">
+                            <div class="slide active">
+                                <img src="photos/vyce-screenshot1.png" alt="Vyce Website Screenshot 1">
+                            </div>
+                            <div class="slide">
+                                <img src="photos/vyce-screenshot2.png" alt="Vyce Website Screenshot 2">
+                            </div>
+                            <div class="slide">
+                                <img src="photos/vyce-screenshot3.png" alt="Vyce Website Screenshot 3">
+                            </div>
+                            <div class="slide">
+                                <img src="photos/vyce-screenshot4.png" alt="Vyce Website Screenshot 3">
+                            </div>
+                           
+                        </div>
+                        <button class="prev" onclick="moveSlide(-1)">❮</button>
+                        <button class="next" onclick="moveSlide(1)">❯</button>
+                    </div>
+                </div>
+
+		</section>
+		</main>
+		
+	    <div class="projects-grid">
+        <div class="project-card">
+            <img src="photos/tlp-logo1.png" alt="Project 1" class="project-image">
+            <div class="project-info">
+                <h2>The Little Picture</h2>
+                <p>A heartfelt narrative 3D platformer, created in 2 months during my MSc in Interactive Digital Media.</p>
+                <a href="rThesis.html" class="project-link">Learn More</a>
+            </div>
+        </div>
+        
+      
+        
+        <div class="project-card">
+            <img src="photos/logo.png" alt="Project 3" class="project-image">
+            <div class="project-info">
+                <h2>HTML</h2>
+                <p>Through my knowledge of HTML5 and CSS I have been able to create a portfolio website utilising my skills to their full ability.</p>
+                <a href="pHTML.html" class="project-link">Learn More</a>
+            </div>
+        </div>
+        
+       
+    </div>
+</div>
+
+<footer>
+    <p>© 2024 Eve Brady. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const slider = document.querySelector('.slider');
+    
+    function showSlide(index) {
+        if (index >= slides.length) {
+            currentSlide = 0;
+        } else if (index < 0) {
+            currentSlide = slides.length - 1;
+        } else {
+            currentSlide = index;
+        }
+        slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+    
+    function moveSlide(direction) {
+        showSlide(currentSlide + direction);
+    }
+    
+    showSlide(currentSlide);
+    </script>
+    
