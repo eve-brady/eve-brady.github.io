@@ -118,6 +118,40 @@ nav {
 .nav-links li a:hover {
     color: #ff1493;
 }
+.scroll-indicator {
+    display: none;
+}
+@media (max-width: 768px) {
+    .nav-links {
+        overflow-x: auto; /* allows horizontal scroll */
+        flex-wrap: nowrap; /* prevent wrapping */
+        gap: 15px;
+        padding-bottom: 10px;
+    }
+
+    .nav-links::-webkit-scrollbar {
+        display: none; /* hide scrollbar for cleaner look */
+    }
+    .scroll-indicator {
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 60%;
+        transform: translateY(-50%);
+        pointer-events: none;
+        font-weight: bold;
+        
+        font-size: 1.2rem;
+         color: rgba(255, 105, 180, 0.4); 
+    
+    animation: none;
+    }
+
+    @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.4; }
+    }
+}
 footer {
  
     bottom: 0;
