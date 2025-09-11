@@ -262,9 +262,22 @@ footer {
 .projects-section h1 {
     font-size: 2.2em;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     color: #000; 
     text-align: center;
+}
+
+
+@media (max-width: 768px) {
+  .projects-section h1 {
+    margin-top: 60px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-section h1 {
+    margin-top: 70px; 
+  }
 }
 
 .projects-grid {
@@ -337,6 +350,9 @@ footer {
     max-width: 1100px;
     margin: 0 auto;
     padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 .bProj-content {
@@ -401,20 +417,51 @@ footer {
   font-size: 18px;
   color: #555;
 }
-.bProj-image img {
-    width: 45%;
-    border-radius: 8px;
-    margin-left: 20px;
-	float: right;
-	margin-right: 50px;
-}
+
 .bProj-description {
-    width: 55%;
-    font-size: 18px;
-    color: #555;
+  width: 55%;
+  font-size: 18px;
+  color: #555;
+  line-height: 1.5;
+  order: 1; /* desktop: text first */
+}
+.bProj-image {
+  width: 45%;
+  margin-left: 20px;
+  margin-right: 50px;
+  order: 2; /* desktop: image second */
+}
+.bProj-image img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
 }
 
+@media (max-width: 768px) {
+  .bProj-overview {
+    flex-direction: column; /* now they stack */
+  }
 
+  .bProj-image {
+    width: 100%;
+    margin: 0 0 15px 0;
+    order: 1; /* image goes above */
+  }
+
+  .bProj-description {
+    width: 100%;
+    font-size: 16px;
+    padding: 0 10px;
+    order: 2; /* description below */
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .bProj-description {
+    font-size: 15px;
+  }
+}
 /* THESIS SPECIFIC DETAILS */
 
 
