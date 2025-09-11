@@ -544,42 +544,47 @@ footer {
 
 /*image slider*/
 
+
+.slider-container {
+    position: relative;
+    max-width: 800px;
+    margin: 40px auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
 .tlp-slider-container {
     position: relative;
     max-width: 500px;
     margin: 40px auto;
-    background-color: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-.slider-container {
-    position: relative;
-    max-width: 900px;
-    margin: 40px auto;
-    background-color: #fff;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-
+/* This maintains a 16:9 aspect ratio */
 .slider {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+.slide {
+  flex: 0 0 100%; /* full width per slide */
+    display: flex;   /* make img stretch to flex container */
 }
 
-.slide {
-    min-width: 100%;
-    box-sizing: border-box;
+.slide.active {
+    display: block;
 }
 
 .slide img {
     width: 100%;
+    height: auto;
+    object-fit: cover; /* fills container without gaps */
     display: block;
     border-radius: 8px;
 }
-
 .prev, .next {
     position: absolute;
     top: 50%;

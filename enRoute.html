@@ -25,58 +25,55 @@
     </nav>
 </header>
 
+
+
 <div class="projects-section">
     <h1>My Projects</h1>
-	<!-- As this page is to focus on expanding upon the chosen project I needed to find a way to differentiate it easier than just creating a div, I googled main content in html and learned about "main" section you can use, I utilised this specifically for the individual project sections to help make them stand out, https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main -->
+	 	
 	<main class="bProj-container">
         <section class="bProj-content">
-            <h2 class="bProj-title"> HTML Website Building</h2>
+            <h2 class="bProj-title"> enRoute</h2>
             <div class="bProj-overview">
                 <p class="bProj-description">
-                    I wanted a space that felt like me, but also somewhere I could show my work in a clean and professional way. For this reason I 
-                    felt it was important for this website to be part portfolio, part playground.
+				Working as a group of 5, enRoute was conceptualised built and published within 3 months. EnRoute is an early-stage collaborative travel web-app, for freidns to create 
+                itineraries and group trips together from the comfort of their own devices.
 				</p>
                 <div class="bProj-image">
-                    <img src="photos/logo.png" alt="Vyce Games Image">
+                    <img src="photos/enRoute2.png" alt="Vyce Games Image">
                 </div>
-                </div>
-                <div class="html-section">
-                    <p>Beginning my process in <strong>Figma</strong> I sketched out the initial wireframes and sitemape. This helped me to visualise
-                    the structure of the site, plan the appropriate navigation and decided how I wanted to balance content with negative space.
-                I chose a <strong>minimalist style</strong> with a limited colour paleter, using pink as an accent in order to add warmth and individuality
-            without overwhelming the overall aesthetic.
-        <br>
-    <br>
-    I then built the website with <strong>HTML and CSS</strong> (and a little <strong>JavaScript</strong>). I experimented with different hover effects and transitions
-which not only add interactivity but also helped to create a sense of polish. I used Flexbox and CSS Grids to structure content and ensure the site is responsive across
-devices.
-<br>
-<br>
-While I wanted the site to feel professional, I also wanted it to feel like <strong>me</strong>. I included small details throughout the site in order to acheive this.
-This included the soft pink mentioned above, but also a hidden CV for Troy within my about page. I felt as though these touches were important to make the site feel both
-welcoming and memorable, while still presenting my work in a professional way.
-<br>
-<br>
-This site gave me hands-on experience with <strong>design-to-code workflow,</strong> from crreating wireframes to building a live site. It also taught me the value of planning ahead
-testing responsiveness and finding the correct palance between professionalism and personality.
-<br>
-<br>
-</p>
-<div class="tlp-slider-container">
+				</div>
+                <div class="vyce-details">
+                    <p>During my MSc, I collaborated with a small team to develop a travel app designed to help users plan and manage their trips together. The project's primary objective
+                        was to create a fully functioning, database-driven app that combined intuitive design with robust functionality.<br>
+                        <br>
+                        I contributed across both front-end and back-end development, collaborating closely on the overall design process. My responsibilities included desiging key web pages,
+                        implementing the navigation bar, footer, footer pages and the itinerary editing page. I was also responsible for creating some of the pre-existing itinerary examples 
+                        featured within the app, which helped to demonstrate the app's functionality and usability to new users.<br>
+                        <br>
+                        Through this project, I gained hands-on experience with JavaScript in a front-end context and strengthened my React skills, the primary framework for our backend 
+                        integration. I also enhanced my proficiency in CSS, HTML, Figma and Canva, while learning to apply design and UX principles to create an intuitive user experience.
+                        Using version control and design prototypes allowed me to refine both my technical and teamwork skills. This also allowed me to tackle
+                        challenges such as dynamic itinerary management and content integration. </p>
+                
+                
+                  <div class="slider-container">
     <div class="slider">
         <div class="slide active">
-            <img src="photos/wireframe1.png" alt="WireFrame Before and After 1">
+            <img src="photos/enroute3.png" alt="Creating Itinerary Page">
         </div>
         <div class="slide">
-            <img src="photos/wireframe2.png" alt="WireFrame Before and After 2">
+            <img src="photos/React.png" alt="React Code 1">
         </div>
         <div class="slide">
-            <img src="photos/tcv.png" alt="Troy's CV Snippet">
+            <img src="photos/enroute4.png" alt="Set Itinerary Page">
         </div>
         <div class="slide">
-            <img src="photos/sitemap.png" alt="Sitemap">
+            <img src="photos/React2.png" alt="React Code 2">
         </div>
-       
+       <div class="slide">
+            <img src="photos/enroute5.png" alt="Profile Page">
+        </div>
+
     </div>
     <button class="prev" onclick="moveSlide(-1)">❮</button>
     <button class="next" onclick="moveSlide(1)">❯</button>
@@ -84,8 +81,12 @@ testing responsiveness and finding the correct palance between professionalism a
 
                 </div>
             </div>
-		</section>
-		</main>
+                    </section>
+                    </main>
+
+  
+         
+
         <div class="projects-section">
 	    <div class="projects-grid">
         <div class="project-card">
@@ -105,15 +106,17 @@ testing responsiveness and finding the correct palance between professionalism a
                 <a href="vGames.html" class="project-link">Learn More</a>
             </div>
         </div>
-        
+
         <div class="project-card">
-            <img src="photos/enRoute.png" alt="Project 3" class="project-image">
+            <img src="photos/logo.png" alt="Project 3" class="project-image">
             <div class="project-info">
-                <h2>enRoute</h2>
-                <p>Working as a team of 5, we built a collaborative travel planning web-app using databases, React and JavaScript.</p>
-                <a href="enRoute.html" class="project-link">Learn More</a>
+                <h2>HTML</h2>
+                <p>Through my knowledge of HTML5 and CSS I have been able to create a portfolio website utilising my skills to their full ability.</p>
+                <a href="pHTML.html" class="project-link">Learn More</a>
             </div>
         </div>
+        </div>
+        
 </div>
        
     </div>
@@ -125,6 +128,7 @@ testing responsiveness and finding the correct palance between professionalism a
 
 </body>
 </html>
+
 <script>
     let currentSlide = 0;
     const slides = document.querySelectorAll('.slide');
